@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 2) How many different evolution images you currently have
   //    Start with 0 (only cat0.jpg).
-  //    When you add cat1.jpg, set this to 1.
-  //    When you add cat2.jpg, set this to 2. Etc.
+  //    When you add cat1.png, set this to 1.
+  //    When you add cat2.png, set this to 2. Etc.
   const MAX_EVOLUTION_INDEX = 1;
 
   // 3) Use a formula to decide which evolution image to show
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getCatImageForLevel(level) {
     const evoIndex = getEvolutionIndex(level);
-    return `assets/images/cat${evoIndex}.jpg`;
+    return `assets/images/cat${evoIndex}.png`;
   }
 
   function updateDisplays() {
