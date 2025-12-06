@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateDisplays() {
     xpDisplay.textContent = "XP: " + xp;
 
-    const level = Math.floor(xp / 10) + 1; // 0–9 → 1, 10–19 → 2, etc.
+    const level = Math.floor(xp / 10);
     levelDisplay.textContent = "Level: " + level;
   }
 
