@@ -9,7 +9,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
@@ -18,15 +17,17 @@ body {
 }
 
 footer {
+  margin-top: auto;        /* <– THIS pushes it to the bottom */
   text-align: center;
-  margin-top: 20px;
-  color: white;         /* Visible on dark backgrounds */
+  padding: 12px 0;
+  color: white;
   font-size: 14px;
-  opacity: 0.8;         /* Slight fade looks nice */
+  opacity: 0.8;
+  width: 100%;             /* optional: full width at bottom */
 }
 
 footer a {
-  color: #eee;          /* Light grey links */
+  color: #eee;
   text-decoration: none;
 }
 
