@@ -1,6 +1,14 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: system-ui, sans-serif;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
