@@ -8,3 +8,21 @@ body {
   background: #111;
   color: #f5f5f5;
 }
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: white;         /* Visible on dark backgrounds */
+  font-size: 14px;
+  opacity: 0.8;         /* Slight fade looks nice */
+}
+
+footer a {
+  color: #eee;          /* Light grey links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
