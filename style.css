@@ -22,16 +22,25 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  max-width: 480px;      /* nice narrow column on desktop */
+  max-width: 480px;          /* nice width on desktop */
   padding: 16px;
   box-sizing: border-box;
-  text-align: center;
 }
 
-/* Your existing stuff can stay as-is (h1, #cat etc.) */
+/* Center the game content */
+.main {
+  flex: 1;                   /* take all space above footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  align-items: center;       /* horizontal center */
+  text-align: center;
+  gap: 8px;
+}
 
+/* Footer styling */
 footer {
-  margin-top: auto;      /* pushes footer to bottom of .page */
+  margin-top: auto;          /* push footer to bottom of .page */
   text-align: center;
   padding: 12px 0;
   color: white;
