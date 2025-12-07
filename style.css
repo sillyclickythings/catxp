@@ -23,6 +23,13 @@ body {
   flex-direction: column;      /* stack main + footer */
 }
 
+.description {
+  max-width: 320px;
+  opacity: 0.8;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
 /* Game area: centered vertically */
 .main {
   flex: 1;                     /* take all space above footer */
