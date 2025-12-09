@@ -11,10 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // XP stored in memory for now (we can persist later)
   let xp = 0;
 
-  // 1) Level from XP: every 10 XP = +1 level
   function getLevelFromXp(xp) {
-    return Math.floor(xp / 10); // 0–9 => 0, 10–19 => 1, etc.
-  }
+    let level = 0;
+    let xpForNextLevel = 10; // cost for level 1
+
+    while (xp >= xpForNextLevel) {
+      xp -= xpForNextLevel;      // pay the XP cost
+      level++;                   // go up a level
+      xpForNextLevel += 10;       // each next level costs 10 more XP
+    }
+  return level;
+}
+
 
   // 2) How many different evolution images you currently have
   //    Start with 0 (only cat0.jpg).
