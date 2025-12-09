@@ -60,6 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateDisplays() {
     const level = getLevelFromXp(xp);
+    const xpToNext = getXpToNextLevel(xp);
+    const nextLevelDisplay = document.getElementById("nextLevel");
+
+    if (nextLevelDisplay) {
+      nextLevelDisplay.textContent = "XP to next level: " + xpToNext;
+  }
+
 
     xpDisplay.textContent = "XP: " + xp;
     levelDisplay.textContent = "Level: " + level;
