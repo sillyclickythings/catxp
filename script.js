@@ -23,6 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
   return level;
 }
 
+  function getXpToNextLevel(xp) {
+    let level = 0;
+    let xpForNextLevel = 10;
+    let originalXp = xp;
+  
+    while (xp >= xpForNextLevel) {
+      xp -= xpForNextLevel;
+      level++;
+      xpForNextLevel += 10; // your current increment amount
+    }
+
+  // xp is now: the XP already spent on this level
+  // xpForNextLevel is how much is required for the NEXT level
+  return xpForNextLevel - xp; 
+}
+
 
   // 2) How many different evolution images you currently have
   //    Start with 0 (only cat0.jpg).
