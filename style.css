@@ -285,7 +285,7 @@ body {
   text-align: center;
   color: #ffe6f7; /* softer white-pink, easier on eyes */
   font-size: 0.9rem;
-  margin: 0;
+  margin: 24px;
   opacity: 1; /* fully opaque */
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.6); /* subtle glow for readability */
 }
