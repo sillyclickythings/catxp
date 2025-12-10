@@ -59,6 +59,8 @@ body {
   transition:
     transform 0.08s ease-out,
     box-shadow 0.12s ease-out;
+  -webkit-tap-highlight-color: transparent; /* remove grey tap square on mobile */
+  outline: none;                            /* no focus outline */
 }
 
 /* Make sure the cat itself cannot go huge */
