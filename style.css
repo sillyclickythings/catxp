@@ -53,10 +53,21 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  font-size: 1.4rem;
+
+  /* ROUND, CUTE, PINK bubble */
+  background: #ffe0f7;          /* soft pastel pink */
+  color: #7a3e6b;               /* cute dark-rose text */
+  padding: 10px;
+  border-radius: 50%;           /* makes it round */
+  font-size: 0.9rem;
   font-weight: bold;
+  border: 2px solid #ffc7ee;    /* slightly darker pink border */
+  box-shadow: 0 0 12px rgba(255, 159, 219, 0.6);
+
   animation: float-up 0.7s ease-out forwards;
+  white-space: nowrap;
 }
+
 
 /* Animation: float upwards and fade out */
 @keyframes float-up {
