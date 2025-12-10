@@ -143,38 +143,50 @@ body {
 
 /* --- Game stats panel --- */
 .stats-panel {
-  position: relative;
   max-width: 320px;
-  margin: 24px auto 0;
-  padding: 16px 18px 20px;
+  margin: 20px auto 0;
+  padding: 14px 16px 18px;
 
-  /* Outer frame body colour */
-  background: #1a1018;
-  border-radius: 16px;
+  /* Dark glossy background */
+  background: radial-gradient(circle at top, #1f1720, #0b070b 65%, #040104 100%);
+  border-radius: 14px;
+  border: 1px solid #ff4fa8;
 
-  /* Outer frame border + drop shadow */
-  border: 3px solid #f5b3df; /* same soft pink as your circle edge */
+  /* Soft "lifted" look */
   box-shadow:
-    0 14px 26px rgba(0, 0, 0, 0.9);      /* strong lift from background */
+    0 10px 22px rgba(0, 0, 0, 0.85),       /* outer shadow */
+    inset 0 1px 0 rgba(255, 255, 255, 0.06), /* subtle top highlight */
+    inset 0 -1px 0 rgba(0, 0, 0, 0.7);       /* subtle bottom shadow */
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Inner recessed panel inside the frame */
-.stats-panel::before {
-  content: "";
-  position: absolute;
-  inset: 6px;                             /* distance from outer frame */
-  border-radius: 12px;
-
-  /* Inner panel surface */
-  background: radial-gradient(circle at top, #241624, #090309 70%);
-
-  /* Bevel / recess effect */
-  box-shadow:
-    inset 0 3px 5px rgba(255, 255, 255, 0.08),  /* top highlight */
-    inset 0 -4px 7px rgba(0, 0, 0, 0.85);       /* bottom shadow */
-
-  z-index: 0;
+.stats-panel #xp,
+.stats-panel #level,
+.stats-panel #nextLevel {
+  text-align: center;
+  margin: 4px 0;
+  color: #f8f8f8;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+  font-size: 0.95rem;
 }
+
+.stats-panel #xp,
+.stats-panel #level {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.stats-panel #nextLevel {
+  font-size: 0.85rem;
+  color: #ffd9f1;
+}
+
+/* Ensure progress bar sits nicely inside */
+.stats-panel .xp-progress {
+  margin-top: 10px;
+}
+
 
 /* Make the actual content sit above the inner panel */
 .stats-panel > * {
