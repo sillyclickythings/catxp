@@ -52,7 +52,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;           /* for bubble positioning */
-  margin: 0 auto;
+  margin: 24px auto;  /* equal space above and below */
   cursor: pointer;
   overflow: hidden;             /* cat + bubbles stay inside the circle */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
