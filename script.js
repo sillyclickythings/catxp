@@ -107,22 +107,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getLevelProgressPercent(xp) {
-  let tempXp = xp;
-  let level = 0;
-  let xpForNext = 10;
-
-  // Deduct XP until we reach the current level
-  while (tempXp >= xpForNext) {
-    tempXp -= xpForNext;
-    level++;
-    xpForNext += 10; // your 10-per-level increment
+    // If this click just caused a level-up, show 100% for this frame
+    const levelNow = getLevelFromXp(xp);
+    const levelBefore = getLevelFromXp(Math.max(xp - 1, 0));
+    if (levelNow > levelBefore) {
+      return 100;
+    }
+  
+    // Otherwise, normal progress within the current level
+    let tempXp = xp;
+    let level = 0;
+    let xpForNext = 10;
+  
+    while (tempXp >= xpForNext) {
+      tempXp -= xpForNext;
+      level++;
+      xpForNext += 10; // your "increment by 10 each level"
+    }
+  
+    return (tempXp / xpForNext) * 100;
   }
 
-  // tempXp = XP earned IN the current level
-  // xpForNext = total XP needed for THIS level
-  const percent = (tempXp / xpForNext) * 100;
-  return percent;
-}
 
 
   // Initial render
