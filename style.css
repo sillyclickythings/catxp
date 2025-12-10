@@ -285,3 +285,26 @@ footer a:hover {
     transform 0.12s ease-out,
     box-shadow 0.12s ease-out;
 }
+
+/* Title styling inside a HUD panel */
+.hud-panel .game-title {
+  color: #ffb3e8;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 6px rgba(255, 79, 168, 0.5);
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 79, 168, 0.25); /* subtle accent line */
+  margin-bottom: 10px; /* space before the paragraph */
+}
+
+/* Optional description style */
+.hud-panel .game-desc {
+  text-align: center;
+  color: #fff;
+  opacity: 0.85;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
