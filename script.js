@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextLevelDisplay = document.getElementById("nextLevel");
 
     if (nextLevelDisplay) {
-      nextLevelDisplay.textContent = "XP to next level: " + xpToNext;
+      nextLevelDisplay.textContent = "Your cat needs " + xpToNext + " more scritches to evolve!";
   }
 
 
