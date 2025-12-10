@@ -238,25 +238,6 @@ body {
   z-index: 1;
 }
 
-/* Footer pinned to bottom */
-footer {
-  margin-top: auto;            /* pushes footer to bottom of .page */
-  text-align: center;
-  padding: 12px 0;
-  color: white;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-footer a {
-  color: #eee;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  color: white;
-}
 
 /* --- Reusable HUD panel frame for title/other panels --- */
 .hud-panel {
@@ -302,9 +283,29 @@ footer a:hover {
 /* Optional description style */
 .hud-panel .game-desc {
   text-align: center;
-  color: #fff;
-  opacity: 0.85;
+  color: #ffe6f7; /* softer white-pink, easier on eyes */
   font-size: 0.9rem;
   margin: 0;
+  opacity: 1; /* fully opaque */
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6); /* subtle glow for readability */
 }
 
+/* Footer pinned to bottom */
+footer {
+  margin-top: auto;            /* pushes footer to bottom of .page */
+  text-align: center;
+  padding: 12px 0;
+  color: white;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+footer a {
+  color: #eee;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
