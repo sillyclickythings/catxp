@@ -63,14 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const level = getLevelFromXp(xp);
     const xpToNext = getXpToNextLevel(xp);
     const nextLevelDisplay = document.getElementById("nextLevel");
+    const progressBar = document.getElementById("xpProgress");
 
     if (nextLevelDisplay) {
       nextLevelDisplay.textContent = "Your cat needs " + xpToNext + " more scritches to evolve!";
   }
-
-
     xpDisplay.textContent = "XP: " + xp;
     levelDisplay.textContent = "Level: " + level;
+
+    if (progressBar) {
+      const percent = getLevelProgressPercent(xp);
+      progressBar.style.width = percent + "%";
+    }
 
     // Update the cat image
     cat.src = getCatImageForLevel(level);
@@ -101,6 +105,25 @@ document.addEventListener("DOMContentLoaded", () => {
       scritchEl.remove();
     }, 700);
   }
+
+  function getLevelProgressPercent(xp) {
+  let tempXp = xp;
+  let level = 0;
+  let xpForNext = 10;
+
+  // Deduct XP until we reach the current level
+  while (tempXp >= xpForNext) {
+    tempXp -= xpForNext;
+    level++;
+    xpForNext += 10; // your 10-per-level increment
+  }
+
+  // tempXp = XP earned IN the current level
+  // xpForNext = total XP needed for THIS level
+  const percent = (tempXp / xpForNext) * 100;
+  return percent;
+}
+
 
   // Initial render
   updateDisplays();
