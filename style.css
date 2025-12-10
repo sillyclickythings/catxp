@@ -120,8 +120,8 @@ body {
   max-width: 260px;
   height: 18px;                     /* taller to match an 8px border */
   background: #000000;              /* solid black interior */
-  border: 8px solid #f5b3df;        /* SAME PINK AS YOUR CIRCLE, 8px thick */
-  border-radius: 999px;
+  border: 6px solid #f5b3df;        /* SAME PINK AS CIRCLE, but 6px thick */
+  border-radius: 500px;
   margin: 14px auto 0;
   overflow: hidden;                 /* keeps progress bar clipped */
   box-shadow: 0 0 10px rgba(255, 170, 220, 0.4); /* soft pink glow */
