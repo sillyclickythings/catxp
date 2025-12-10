@@ -144,19 +144,35 @@ body {
 /* --- Game stats panel --- */
 .stats-panel {
   max-width: 320px;
-  margin: 20px auto 0;
-  padding: 14px 16px 18px;
+  margin: 22px auto 0;
+  padding: 18px 20px 22px;
 
-  /* 3D-ish dark panel with subtle pink tint */
-  background: radial-gradient(circle at top, #1f1720, #0b070b 65%, #040104 100%);
+  /* Subtle dark-purple/pink tinted material */
+  background: #120d13;
   border-radius: 14px;
-  border: 1px solid #ff4fa8;
 
-  /* "Raised" 3D look */
+  /* Strong 3D stack: outer frame + inner bevel + top/side light */
   box-shadow:
-    0 10px 22px rgba(0, 0, 0, 0.85),                /* drop shadow */
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),        /* top highlight */
-    inset 0 -1px 0 rgba(0, 0, 0, 0.7);              /* bottom dark */
+    /* OUTER FRAME */
+    0 0 0 3px #ff4fa8,                      /* pink outer frame */
+    
+    /* LIFT FROM BACKGROUND */
+    0 10px 22px rgba(0, 0, 0, 0.85),        /* big drop shadow */
+
+    /* INNER BEVEL — the 3D magic */
+    inset 0 3px 5px rgba(255, 255, 255, 0.10),  /* top highlight */
+    inset 0 -3px 6px rgba(0, 0, 0, 0.60),       /* bottom shadow */
+    inset 3px 0 5px rgba(0, 0, 0, 0.45),         /* left shadow */
+    inset -3px 0 5px rgba(255, 255, 255, 0.08);  /* right highlight */
+
+  /* Slight depth pressed feel */
+  transition: transform 0.12s ease-out;
+}
+
+.stats-panel:active {
+  transform: translateY(2px); /* subtle press-down */
+}
+
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
