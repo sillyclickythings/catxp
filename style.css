@@ -112,6 +112,33 @@ body {
   }
 }
 
+/* XP progress bar container */
+.xp-progress {
+  width: 100%;
+  max-width: 260px;
+  height: 18px;                     /* taller to match an 8px border */
+  background: #000000;              /* solid black interior */
+  border: 8px solid #f5b3df;        /* SAME PINK AS YOUR CIRCLE, 8px thick */
+  border-radius: 999px;
+  margin: 14px auto 0;
+  overflow: hidden;                 /* keeps progress bar clipped */
+  box-shadow: 0 0 10px rgba(255, 170, 220, 0.4); /* soft pink glow */
+}
+
+/* The filling part of the bar */
+.xp-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #e5e5e5,
+    #fdfdfd
+  ); /* shiny silver/white */
+  border-radius: 999px;
+  transition: width 0.25s ease-out;
+}
+
 
 
 /* Footer pinned to bottom */
