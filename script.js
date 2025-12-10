@@ -75,21 +75,32 @@ document.addEventListener("DOMContentLoaded", () => {
     cat.src = getCatImageForLevel(level);
   }
 
-  function showFloatingScritch() {
-      const wrapper = cat.parentElement; // <div class="cat-wrapper">
-      if (!wrapper) return;
-    
-      const scritchEl = document.createElement("span");
-      scritchEl.className = "floating-xp";
-      scritchEl.textContent = "+1";
-    
-      wrapper.appendChild(scritchEl);
-    
-      // Remove after the animation finishes (matches 0.7s in CSS)
-      setTimeout(() => {
-        scritchEl.remove();
-      }, 700);
-    }
+  function showFloatingScritch(clickX, clickY) {
+    const wrapper = cat.parentElement; // <div class="cat-wrapper">
+    if (!wrapper) return;
+  
+    const rect = wrapper.getBoundingClientRect();
+  
+    // Create the bubble
+    const scritchEl = document.createElement("span");
+    scritchEl.className = "floating-xp";
+    scritchEl.textContent = "+1";
+  
+    // Position bubble exactly where clicked
+    const offsetX = clickX - rect.left;
+    const offsetY = clickY - rect.top;
+  
+    scritchEl.style.left = offsetX + "px";
+    scritchEl.style.top = offsetY + "px";
+  
+    wrapper.appendChild(scritchEl);
+  
+    // Remove after animation
+    setTimeout(() => {
+      scritchEl.remove();
+    }, 700);
+  }
+
 
 
   // Initial render
