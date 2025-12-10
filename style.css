@@ -47,7 +47,7 @@ body {
   height: 220px;
   background: #ffffff;
   border-radius: 50%;           /* perfect circle */
-  border: 4px solid #f5c2e9;    /* visible pink edge so you SEE the circle */
+  border: 8px solid #f5c2e9;    /* visible pink edge so you SEE the circle */
   display: flex;
   align-items: center;
   justify-content: center;
