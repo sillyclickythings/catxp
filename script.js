@@ -75,12 +75,31 @@ document.addEventListener("DOMContentLoaded", () => {
     cat.src = getCatImageForLevel(level);
   }
 
+  function showFloatingScritch() {
+      const wrapper = cat.parentElement; // <div class="cat-wrapper">
+      if (!wrapper) return;
+    
+      const scritchEl = document.createElement("span");
+      scritchEl.className = "floating-xp";
+      scritchEl.textContent = "+1";
+    
+      wrapper.appendChild(scritchEl);
+    
+      // Remove after the animation finishes (matches 0.7s in CSS)
+      setTimeout(() => {
+        scritchEl.remove();
+      }, 700);
+    }
+
+
   // Initial render
   updateDisplays();
 
   cat.addEventListener("click", () => {
     xp++;
     updateDisplays();
+    showFloatingScritch();
   });
+  
 });
 
