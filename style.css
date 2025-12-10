@@ -141,6 +141,54 @@ body {
   transition: width 0.25s ease-out;
 }
 
+/* --- Game stats panel --- */
+.stats-panel {
+  max-width: 320px;
+  margin: 20px auto 0;
+  padding: 14px 16px 18px;
+
+  /* 3D-ish dark panel with subtle pink tint */
+  background: radial-gradient(circle at top, #1f1720, #0b070b 65%, #040104 100%);
+  border-radius: 14px;
+  border: 1px solid #ff4fa8;
+
+  /* "Raised" 3D look */
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.85),                /* drop shadow */
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),        /* top highlight */
+    inset 0 -1px 0 rgba(0, 0, 0, 0.7);              /* bottom dark */
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Make the text inside feel a bit more "HUD" */
+.stats-panel #xp,
+.stats-panel #level,
+.stats-panel #nextLevel {
+  text-align: center;
+  margin: 4px 0;
+  color: #f8f8f8;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Slight emphasis on XP + Level labels */
+.stats-panel #xp,
+.stats-panel #level {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* "Next scritches" as softer helper text */
+.stats-panel #nextLevel {
+  font-size: 0.85rem;
+  color: #ffd9f1;
+}
+
+/* Nudge progress bar inside panel */
+.stats-panel .xp-progress {
+  margin-top: 10px;
+}
 
 
 /* Footer pinned to bottom */
