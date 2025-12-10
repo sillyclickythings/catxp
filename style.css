@@ -41,6 +41,35 @@ body {
   gap: 8px;
 }
 
+.cat-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* The floating +1 scritch text */
+.floating-xp {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  animation: float-up 0.7s ease-out forwards;
+}
+
+/* Animation: float upwards and fade out */
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+}
+
 /* Footer pinned to bottom */
 footer {
   margin-top: auto;            /* pushes footer to bottom of .page */
