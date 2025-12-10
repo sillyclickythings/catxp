@@ -87,9 +87,9 @@ body {
 
   background: #ff4fa8;              /* stronger pink */
   color: #ffffff;
-  padding: 10px;
+  padding: 7px;
   border-radius: 50%;
-  border: 2px solid #ff177f;
+  border: 3px solid #ff177f;
   box-shadow:
     0 0 8px rgba(255, 0, 140, 0.9),  /* bright glow */
     0 4px 6px rgba(0, 0, 0, 0.35);   /* little drop shadow for 3D feel */
@@ -97,7 +97,7 @@ body {
   font-weight: bold;
   white-space: nowrap;
 
-  animation: float-up 0.7s ease-out forwards;
+  animation: float-up 1.0s ease-out forwards;
 }
 
 /* Float upwards + fade slightly */
