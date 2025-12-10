@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const cat = document.getElementById("cat");
+  const wrapper = document.querySelector(".cat-wrapper");
   const xpDisplay = document.getElementById("xp");
   const levelDisplay = document.getElementById("level");
 
@@ -101,16 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 700);
   }
 
-
-
   // Initial render
   updateDisplays();
 
-  cat.addEventListener("click", () => {
-    xp++;
-    updateDisplays();
-    showFloatingScritch();
+  wrapper.addEventListener("click", (event) => {
+    xp++;                 // increment XP
+    updateDisplays();     // update XP + level
+    showFloatingScritch(event.clientX, event.clientY); // show bubble
   });
+
   
 });
 
